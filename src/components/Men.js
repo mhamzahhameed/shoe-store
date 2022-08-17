@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import axios from "axios";
 
 import { ImageListItem, ImageList, ImageListItemBar } from "@mui/material";
@@ -22,19 +22,19 @@ const MenShoes = () => {
   //   return <div>Data Loading.....</div>;
   // }
   let { products } = shoes;
-  console.log("products: ", products);
+  // console.log("products: ", products);
 
-  const objiterator = (p, alt) => {
-    for (var key of p) {
-      return (
-        <ul>
-          <li>
-            <img src={p[key]} alt={alt} />
-          </li>
-        </ul>
-      );
-    }
-  };
+  // const objiterator = (p, alt) => {
+  //   for (var key of p) {
+  //     return (
+  //       <ul>
+  //         <li>
+  //           <img src={p[key]} alt={alt} />
+  //         </li>
+  //       </ul>
+  //     );
+  //   }
+  // };
 
   return (
     <div>
