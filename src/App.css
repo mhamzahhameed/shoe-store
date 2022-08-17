@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.contact {
+  margin-bottom: 40%;
+  position: relative;
+}
+
+.contact strong {
+  font-size: medium;
+}
+
+.contact span {
+  text-decoration: underline;
+}
+
+.image {
+  float: left;
+  width: 400px;
+  height: 300;
+  padding: 20px;
+}
