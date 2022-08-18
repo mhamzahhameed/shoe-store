@@ -6,7 +6,7 @@ const NavBar = () => {
     <div>
       <nav>
         <div className='nav-wrapper'>
-          <a href='!' className='brand-logo right'>
+          <a href='/' className='brand-logo right'>
             ENDURE
           </a>
           <ul id='nav-mobile' className='left'>
@@ -14,13 +14,10 @@ const NavBar = () => {
               <Link to='/'>HOME</Link>
             </li>
             <li>
-              <Link to='about'>ABOUT</Link>
-            </li>
-            <li>
               <Link to='men'>Men</Link>
             </li>
             <li>
-              <Link to='women'>Women</Link>
+              <Link to='about'>ABOUT</Link>
             </li>
             <li>
               <Link to='contact'>CONTACT</Link>
@@ -29,7 +26,7 @@ const NavBar = () => {
               <i className='material-icons'>add_shopping_cart</i>
             </li>
             <li>
-              <a href='#!' className='collection-items'>
+              <a href='/' className='collection-items'>
                 <span className='new badge'>4</span>
               </a>
             </li>

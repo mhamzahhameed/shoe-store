@@ -5,36 +5,27 @@ import axios from "axios";
 import { ImageListItem, ImageList, ImageListItemBar } from "@mui/material";
 
 const MenShoes = () => {
+  let [isFetching, setIsFetching] = useState(false);
   let data = { title: "Waiting for Data" };
   const [shoes, setShoes] = useState(data);
 
   useEffect(() => {
+    setIsFetching(true);
     axios
       .get("https://dummyjson.com/products/category/mens-shoes")
       .then((res) => {
         setShoes(res?.data);
+        setIsFetching(false);
       });
-
-    // fetchData();
   }, []);
 
-  // if (isFetching) {
-  //   return <div>Data Loading.....</div>;
-  // }
+  if (isFetching)
+    return (
+      <div style={{ textAlign: "center", text: "bold" }}>
+        <h3>Data Loading.....</h3>
+      </div>
+    );
   let { products } = shoes;
-  // console.log("products: ", products);
-
-  // const objiterator = (p, alt) => {
-  //   for (var key of p) {
-  //     return (
-  //       <ul>
-  //         <li>
-  //           <img src={p[key]} alt={alt} />
-  //         </li>
-  //       </ul>
-  //     );
-  //   }
-  // };
 
   return (
     <div>
@@ -53,7 +44,7 @@ const MenShoes = () => {
                 {v?.title}
               </h2>
               <ImageList
-                sx={{ width: 1200, height: 850 }}
+                sx={{ width: 1230, height: 850 }}
                 variant='quilted'
                 cols={3}
                 rowHeight={350}
@@ -72,7 +63,6 @@ const MenShoes = () => {
                       src={`${item}?w=248&fit=crop&auto=format`}
                       srcSet={`${item}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       alt={v?.title}
-                      loading='lazy'
                     />
                     <ImageListItemBar
                       title={v?.title}
@@ -84,10 +74,6 @@ const MenShoes = () => {
                   </ImageListItem>
                 ))}
               </ImageList>
-
-              {/* {v?.images.map((r, j) => {
-                return <img key={j} className='image' src={r} alt={v?.i} />;
-              })} */}
             </li>
           );
         })}
