@@ -4,17 +4,19 @@ import axios from "axios";
 
 const HomeDetails = () => {
   const { id } = useParams();
+
   const [shoes, setShoes] = useState([]);
-  const getData = () => {
-    axios
-      .get("https://dummyjson.com/products/category/mens-shoes")
-      .then((res) => {
-        console.log(res.data);
-        setShoes(res?.data);
-      });
+
+  const fetchData = async () => {
+    const res = await axios.get(
+      "https://dummyjson.com/products/category/mens-shoes"
+    );
+    let data = await res.data;
+    setShoes(data);
   };
+
   useEffect(() => {
-    getData();
+    fetchData();
   }, []);
 
   let { products } = shoes;

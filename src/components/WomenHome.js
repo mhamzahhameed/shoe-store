@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const WomenHome = () => {
   const [shoes, setShoes] = useState([]);
-  const fetchData = () => {
-    axios
-      .get("https://dummyjson.com/products/category/womens-shoes")
-      .then((res) => {
-        setShoes(res?.data);
-      });
+  const fetchData = async () => {
+    const res = await axios.get(
+      "https://dummyjson.com/products/category/womens-shoes"
+    );
+    const data = await res.data;
+    setShoes(data);
   };
 
   useEffect(() => {
