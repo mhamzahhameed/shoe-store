@@ -6,15 +6,15 @@ const NavBar = () => {
     <div>
       <nav>
         <div className='nav-wrapper'>
-          <a href='/' className='brand-logo right'>
+          <Link to='/' className='brand-logo right'>
             ENDURE
-          </a>
+          </Link>
           <ul id='nav-mobile' className='left'>
             <li>
               <Link to='/'>HOME</Link>
             </li>
             <li>
-              <Link to='men'>Men</Link>
+              <Link to='women'>Women</Link>
             </li>
             <li>
               <Link to='about'>ABOUT</Link>
@@ -26,9 +26,9 @@ const NavBar = () => {
               <i className='material-icons'>add_shopping_cart</i>
             </li>
             <li>
-              <a href='/' className='collection-items'>
+              <Link to='/' className='collection-items'>
                 <span className='new badge'>4</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

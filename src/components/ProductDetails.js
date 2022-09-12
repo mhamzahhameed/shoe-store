@@ -6,9 +6,8 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <h1> {id} </h1>
+      <div>{id}</div>
     </div>
   );
 };
-
 export default ProductDetails;
