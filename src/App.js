@@ -3,9 +3,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Navbar from "./components/NavBar";
 import PageNotFound from "./components/PageNotFound";
-import Women from "./components/Women";
-import WomenHome from "./components/WomenHome";
-import ProductDetails from "./components/ProductDetails";
+import Others from "./components/Others";
+import OthersHome from "./components/OthersHome";
+import OthersDetails from "./components/OthersDetails";
 import Contact from "./components/Contact";
 import HomeDetails from "./components/HomeDetails";
 import "materialize-css/dist/css/materialize.min.css";
@@ -22,9 +22,9 @@ function App() {
         </Route>
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
-        <Route path='women' element={<Women />}>
-          <Route path='/women/' element={<WomenHome />} />
-          <Route path=':id' element={<ProductDetails />} />
+        <Route path='others' element={<Others />}>
+          <Route path='/others/' element={<OthersHome />} />
+          <Route path=':id' element={<OthersDetails />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>
