@@ -6,8 +6,12 @@ const NavBar = () => {
     <div>
       <nav>
         <div className='nav-wrapper'>
-          <Link to='/' className='brand-logo right'>
-            ENDURE
+          <Link
+            to='/'
+            className='brand-logo right'
+            style={{ color: "darkgray" }}
+          >
+            PAK_ShOES
           </Link>
           <ul id='nav-mobile' className='left'>
             <li>

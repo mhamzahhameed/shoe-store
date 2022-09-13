@@ -191,6 +191,10 @@ const HomeHome = () => {
   };
   return (
     <div>
+      <h1 style={{ textAlign: "center", text: "bold" }}>
+        {" "}
+        Offers by <span style={{ color: "darkgray" }}>PAK_SHOWS</span>{" "}
+      </h1>
       <h2 style={{ textAlign: "center", text: "bold" }}>Nike Products</h2>
       <ImageList
         sx={{ width: 1230, height: 850 }}
